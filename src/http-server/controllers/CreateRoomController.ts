@@ -12,6 +12,11 @@ export class CreateRoomRequest {
 	teamQuantity: number;
 	isRanked: boolean;
 	tournament: string;
+	startLp: number;
+	timeLimit: number;
+	mainMin: number;
+	mainMax: number;
+	sideMax: number;
 }
 
 export class CreateRoomController {
