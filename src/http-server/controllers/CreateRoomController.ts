@@ -17,6 +17,7 @@ export class CreateRoomRequest {
 	mainMin: number;
 	mainMax: number;
 	sideMax: number;
+	duelRule: number;
 }
 
 export class CreateRoomController {

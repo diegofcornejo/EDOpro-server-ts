@@ -48,7 +48,7 @@ export class RoomCreator {
 			extraMax: 15,
 			sideMin: 0,
 			sideMax: payload.sideMax || 15,
-			duelRule: 0,
+			duelRule: payload.duelRule || 0,
 			handshake: 4043399681,
 			password,
 			duelFlagsHight: 1,
