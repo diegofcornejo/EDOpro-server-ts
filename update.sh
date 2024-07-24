@@ -23,7 +23,7 @@ docker rm -f $DOCKER_CONTAINER_NAME
 docker rmi $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
 
 # Build the image
-docker build -t $DOCKER_IMAGE_NAME --progress=plain . 2>&1 | tee ../docker-build.log
+docker build -t $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG --progress=plain . 2>&1 | tee ../docker-build.log
 
 # Return to project root
 cd $ORG_PATH
