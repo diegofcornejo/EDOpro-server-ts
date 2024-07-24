@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ORG_PATH="/orgs/evolutionygo"
-REPO_NAME="hot-db-update"
+REPO_NAME="beta"
 DOCKER_IMAGE_NAME="evolutionygo/server"
 DOCKER_IMAGE_TAG="beta"
-DOCKER_CONTAINER_NAME="evolutionygo-server-beta"
+DOCKER_CONTAINER_NAME="evolutionygo-server-$DOCKER_IMAGE_TAG"
 LOKI_URL="http://localhost:3100/loki/api/v1/push"
 
 # Go to the repository
@@ -31,10 +31,10 @@ cd $ORG_PATH
 # Run the container
 docker run -d --env-file ./evolution-server.env \
 --name $DOCKER_CONTAINER_NAME \
--p 4000:4000 \
--p 7711:7711 \
--p 7911:7911 \
--p 7922:7922 \
+-p 4001:4000 \
+-p 7712:7711 \
+-p 7912:7911 \
+-p 7923:7922 \
 -v `pwd`/certs:/app/certs \
 -v `pwd`/$REPO_NAME/db/BabelCDB:/app/databases/evolution:ro \
 --log-driver=loki \
