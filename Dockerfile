@@ -7,7 +7,7 @@ RUN apt-get update -y && \
 WORKDIR /repositories
 
 RUN git clone --depth 1 https://github.com/ProjectIgnis/CardScripts.git scripts && \
-    git clone --depth 1 https://github.com/ProjectIgnis/BabelCDB.git databases && \
+    # git clone --depth 1 https://github.com/ProjectIgnis/BabelCDB.git databases && \
     git clone --depth 1 https://github.com/ProjectIgnis/LFLists banlists-project-ignis && \
     git clone --depth 1 https://github.com/termitaklk/lflist banlists-evolution && \
     git clone --depth 1 https://github.com/Smile-DK/ygopro-scripts.git mercury-scripts && \
@@ -59,7 +59,7 @@ COPY --from=server-builder /server/mercury ./mercury
 COPY --from=core-integrator-builder /app/libocgcore.so ./core/libocgcore.so
 COPY --from=core-integrator-builder /app/CoreIntegrator ./core/CoreIntegrator
 COPY --from=core-integrator-builder /repositories/scripts ./scripts/evolution/
-COPY --from=core-integrator-builder /repositories/databases ./databases/evolution/
+# COPY --from=core-integrator-builder /repositories/databases ./databases/evolution/
 COPY --from=core-integrator-builder /repositories/banlists ./banlists/evolution/
 COPY --from=core-integrator-builder /repositories/mercury-scripts ./mercury/script
 COPY --from=core-integrator-builder /repositories/mercury-lflist.conf ./mercury/lflist.conf

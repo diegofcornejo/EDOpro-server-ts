@@ -1,0 +1,3 @@
+[submodule "db/BabelCDB"]
+	path = db/BabelCDB
+	url = https://github.com/evolutionygo/BabelCDB
