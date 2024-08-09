@@ -13,7 +13,7 @@ RUN git clone --depth 1 https://github.com/ProjectIgnis/CardScripts.git scripts 
     git clone --depth 1 https://github.com/Smile-DK/ygopro-scripts.git mercury-scripts && \
 		git clone --depth 1 https://code.mycard.moe/mycard/pre-release-database-cdb mercury-pre-release && \
     wget -O mercury-lflist.conf https://raw.githubusercontent.com/fallenstardust/YGOMobile-cn-ko-en/master/mobile/assets/data/conf/lflist.conf && \
-    wget -O mercury-cards.cdb https://raw.githubusercontent.com/moecube/ygopro/server/cards.cdb
+    wget -O mercury-cards.cdb https://github.com/purerosefallen/ygopro/raw/server/cards.cdb
 
 RUN mkdir -p mercury/databases/
 RUN mv mercury-pre-release/*.cdb mercury/databases/
