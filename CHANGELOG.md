@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/diegofcornejo/EDOpro-server-ts/compare/v2.6.0...v2.6.1) (2025-04-09)
+
+
+### Bug Fixes
+
+* md command ([8ae654d](https://github.com/diegofcornejo/EDOpro-server-ts/commit/8ae654d4817d4b1ace48356026aaf162166460c1))
+
 ## [2.6.0](https://github.com/diegofcornejo/EDOpro-server-ts/compare/v2.5.0...v2.6.0) (2025-04-04)
 
 
